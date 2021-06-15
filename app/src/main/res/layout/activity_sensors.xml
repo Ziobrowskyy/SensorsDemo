@@ -10,18 +10,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
-        android:gravity="center">
+        android:padding="40dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/gyroscope_label_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gyroscope" />
+            android:text="Gyroscope"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -29,18 +35,24 @@
                 android:id="@+id/gyro_x_label_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="x:"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/gyro_x_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="null" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -48,18 +60,24 @@
                 android:id="@+id/gyro_y_label_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="y:"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/gyro_y_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="null" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout3"
-            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -67,13 +85,18 @@
                 android:id="@+id/gyro_z_label_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="z:"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/gyro_z_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="null" />
         </LinearLayout>
 
 
@@ -81,12 +104,15 @@
             android:id="@+id/accelerometer_label_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Accelerometer" />
+            android:text="Accelerometer"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
         <LinearLayout
             android:id="@+id/linearLayout4"
-            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -94,18 +120,24 @@
                 android:id="@+id/acc_x_label_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="x:"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/acc_x_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="null" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout5"
-            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -113,18 +145,24 @@
                 android:id="@+id/acc_y_label_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="y:"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/acc_y_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="null" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout6"
-            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -132,25 +170,201 @@
                 android:id="@+id/acc_z_label_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="z:"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/acc_z_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="null" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/magnetic_field_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Magnetic field [μT]"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout10"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mag_x_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x:"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/mag_x_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout11"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mag_y_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="y:"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/mag_y_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout12"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mag_z_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="z:"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/mag_z_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="null" />
         </LinearLayout>
 
 
         <TextView
-            android:id="@+id/light_sensor_label_tv"
+            android:id="@+id/light_label_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Light sensor" />
+            android:text="Light sensor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/light_sensor_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Value [lx]:"
+                android:textStyle="bold" />\
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/light_sensor_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="null" />
+        </LinearLayout>
         <TextView
-            android:id="@+id/light_sensor_tv"
+            android:id="@+id/ambient_temperature_label_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Ambient temperature sensor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ambient_temperature_sensor_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Value [°C]:"
+                android:textStyle="bold" />\
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/ambient_temperature_sensor_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="null" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pressure_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pressure sensor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pressure_sensor_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Value [hPa/mbar]:"
+                android:textStyle="bold" />\
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/pressure_sensor_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="null" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

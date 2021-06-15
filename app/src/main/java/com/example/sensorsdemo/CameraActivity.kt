@@ -3,8 +3,10 @@ package com.example.sensorsdemo
 import android.Manifest
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
 import androidx.camera.core.CameraSelector
@@ -51,8 +53,11 @@ class CameraActivity : AppCompatActivity() {
 
         // Set up the listener for take photo button
         camera_capture_button.setOnClickListener {
-            takePhoto() }
-        camera_switch_button.setOnClickListener { switchCamera() }
+            takePhoto()
+        }
+        camera_switch_button.setOnClickListener {
+            switchCamera()
+        }
 
         outputDirectory = getOutputDirectory()
 
@@ -148,7 +153,7 @@ class CameraActivity : AppCompatActivity() {
             val preview = Preview.Builder()
                 .build()
                 .also {
-                    it.setSurfaceProvider(viewFinder.surfaceProvider)
+                    it.setSurfaceProvider(view_finder.surfaceProvider)
                 }
 
             imageCapture = ImageCapture.Builder()
@@ -170,16 +175,17 @@ class CameraActivity : AppCompatActivity() {
         }, ContextCompat.getMainExecutor(this))
     }
 
+    //check if permissions are granted for all required permissions
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
-        ContextCompat.checkSelfPermission(
-            baseContext, it
-        ) == PackageManager.PERMISSION_GRANTED
+        ContextCompat.checkSelfPermission(baseContext, it) == PackageManager.PERMISSION_GRANTED
     }
 
     private fun getOutputDirectory(): File {
         val mediaDir = externalMediaDirs.firstOrNull()?.let {
-            File(it, resources.getString(R.string.app_name)).apply { mkdirs() }
-        }
+            // make directory if it's not already present
+                File(it, resources.getString(R.string.app_name)).apply { mkdirs() }
+            }
+        //check if mediaDir is properly created
         return if (mediaDir != null && mediaDir.exists())
             mediaDir
         else
